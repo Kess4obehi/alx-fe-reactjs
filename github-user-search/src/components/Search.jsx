@@ -1,20 +1,12 @@
-import { useState } from "react";
-import { fetchUserData } from "../services/githubService";
+import { useState } from 'react';
 
 function Search() {
   const [username, setUsername] = useState("");
 
-  const handleSubmit = async (e) => {
+  // This runs when the form is submitted
+  const handleSubmit = (e) => {
     e.preventDefault();
-cd
-    if (!username) return;
-
-    try {
-      const user = await fetchUserData(username);
-      console.log(user);
-    } catch (error) {
-      console.error("User not found", error);
-    }
+    console.log(username);
   };
 
   return (
@@ -23,13 +15,10 @@ cd
         type="text"
         id="github-username"
         name="githubUsername"
-        placeholder="Search GitHub username"
+        placeholder="Enter Github username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
-      <button type="submit">Search</button>
     </form>
-  );
-}
-
-export default Search;
+  )
+  }
