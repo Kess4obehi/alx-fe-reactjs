@@ -4,22 +4,28 @@ function AddRecipeForm() {
   const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [steps, setSteps] = useState("");
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState("");
+
+  const validate = () => {
+    if (!title || !ingredients || !steps) {
+      setErrors("All fields are required.");
+      return false;
+    }
+
+    if (ingredients.split(",").length < 2) {
+      setErrors("Please include at least two ingredients.");
+      return false;
+    }
+
+    setErrors("");
+    return true;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!title || !ingredients || !steps) {
-      setError("All fields are required.");
-      return;
-    }
+    if (!validate()) return;
 
-    if (ingredients.split(",").length < 2) {
-      setError("Please include at least two ingredients.");
-      return;
-    }
-
-    setError("");
     alert("Recipe submitted successfully!");
   };
 
@@ -32,9 +38,9 @@ function AddRecipeForm() {
 
         <form onSubmit={handleSubmit}>
           {/* Error Message */}
-          {error && (
+          {errors && (
             <p className="text-red-600 mb-4 text-center">
-              {error}
+              {errors}
             </p>
           )}
 
