@@ -2,13 +2,49 @@
   {
     "id": 1,
     "title": "Spaghetti Carbonara",
-    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://via.placeholder.com/150"
+    "summary": "A classic Italian pasta dish made with eggs, cheese, crispy bacon, and black pepper.",
+    "image": "public/images/Spaghetti.jpg",
+    "ingredients": [
+      "Spaghetti pasta",
+      "Eggs",
+      "Parmesan cheese",
+      "Bacon",
+      "Black pepper",
+      "Salt"
+    ],
+    "instructions": [
+      "Boil the spaghetti in salted water until al dente.",
+      "Fry the bacon until crispy, then set aside.",
+      "Whisk eggs and grated Parmesan cheese together in a bowl.",
+      "Drain the pasta and add it to the pan with bacon.",
+      "Remove from heat and quickly mix in the egg and cheese mixture.",
+      "Season with black pepper and serve hot."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
-    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://via.placeholder.com/150"
+    "summary": "Tender grilled chicken cooked in a creamy, spiced tomato sauce.",
+    "image": "public/images/Tikka-masala.jpg",
+    "ingredients": [
+      "Chicken breast",
+      "Yogurt",
+      "Tomato puree",
+      "Onion",
+      "Garlic",
+      "Ginger",
+      "Garam masala",
+      "Paprika",
+      "Cream",
+      "Salt"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt and spices for at least 1 hour.",
+      "Grill or pan-fry the chicken until cooked through.",
+      "Sauté onions, garlic, and ginger in a pan.",
+      "Add tomato puree and spices, then simmer.",
+      "Stir in cream and grilled chicken.",
+      "Cook for a few minutes and serve with rice or naan."
+    ]
   }
 ]
