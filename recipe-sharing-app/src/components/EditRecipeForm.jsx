@@ -11,7 +11,7 @@ const EditRecipeForm = ({ recipe }) => {
     event.preventDefault();
 
     updateRecipe({
-      id: recipe.id,
+      ...recipe,
       title,
       description,
     });
@@ -27,12 +27,16 @@ const EditRecipeForm = ({ recipe }) => {
         onChange={(e) => setTitle(e.target.value)}
       />
 
+      <br />
+
       <textarea
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
 
-      <button type="submit">Update</button>
+      <br />
+
+      <button type="submit">Update Recipe</button>
     </form>
   );
 };
